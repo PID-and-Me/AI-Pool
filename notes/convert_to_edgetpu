@@ -1,0 +1,19 @@
+#Setup Dependencies
+!pip install "protobuf>=4.21.6"
+!pip install ultralytics
+!pip install "onnx2tf>=1.17.5,<=1.26.3"
+!pip install onnx
+!pip install "sng4onnx>=1.0.1"
+!pip install "onnx-graphsurgeon>=0.3.26"
+!pip install "onnxslim>=0.1.31"
+!pip install tflite-support
+!pip install onnxruntime
+
+Convert
+from ultralytics import YOLO
+
+# Load the YOLO11 model
+model = YOLO("yolo11n.pt")
+
+# Export the model to TFLite Edge TPU format
+model.export(format="edgetpu",imgsz=240)  # creates 'yolo11n_full_integer_quant_edgetpu.tflite'
