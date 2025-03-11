@@ -1,2 +1,2 @@
 # AI-Pool
-Collection of random AI tools, mostly yolov11 and edge applications
+A Collection of AI Models, tools, and resources for Edge-TPU devices
